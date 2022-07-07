@@ -3,4 +3,4 @@
 https://www.youtube.com/watch?v=iSNsgj1OCLA
 
 
-![alt text]([https://ibb.co/x63xVk5](https://i.ibb.co/WfsmShK/Screenshot-1.jpg))
+[![Screenshot-1.jpg](https://i.postimg.cc/q7Sw15zz/Screenshot-1.jpg)](https://postimg.cc/yJh0dnhH)
