@@ -1,0 +1,76 @@
+﻿<Window x:Class="PrisonBoxesExercise.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrisonBoxesExercise"
+        mc:Ignorable="d"
+        Title="MainWindow"  ResizeMode="NoResize" Height="900" Width="1600">
+    <Grid>
+        <TabControl>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <Rectangle HorizontalAlignment="Left" Height="547" Margin="394,40,0,0" Stroke="Green" StrokeThickness="3" VerticalAlignment="Top" Width="420"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="430,73,0,0" Text="LuckyPrisoners" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="143"/>
+                    <TextBox FontWeight="Bold" IsReadOnly="True" x:Name="lPr" HorizontalAlignment="Left" Margin="639,73,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="25"/>
+
+
+                    <TextBox FontWeight="Bold" IsReadOnly="True" x:Name="unLPr" HorizontalAlignment="Left" Margin="639,108,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="430,108,0,0" Text="UnluckyPrisoners" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="143"/>
+
+                    <TextBlock HorizontalAlignment="Left" Margin="937,154,0,0" Text="Prisoners prevail" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="143"/>
+                    <TextBox FontWeight="Bold" IsReadOnly="True" x:Name="prWin" HorizontalAlignment="Left" Margin="1146,154,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27"/>
+
+                    <Button Content="CLEAR" HorizontalAlignment="Left" Margin="451,612,0,0" VerticalAlignment="Top" Height="83" Width="316" Click="ClearSingleStats"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="937,186,0,0" Text="All die" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="143"/>
+                    <TextBox FontWeight="Bold" IsReadOnly="True" x:Name="prLose" HorizontalAlignment="Left" Margin="1146,186,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27"/>
+
+                    <Rectangle HorizontalAlignment="Left" Height="547" Margin="898,40,0,0" Stroke="Cyan" StrokeThickness="3" VerticalAlignment="Top" Width="420" />
+
+                    <TextBlock HorizontalAlignment="Left" Margin="937,73,0,0" Text="Overall Lucky" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="143"/>
+                    <TextBox IsReadOnly="True" x:Name="OverallLucky" HorizontalAlignment="Left" Margin="1146,73,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="937,108,0,0" Text="Overall unLucky" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="143"/>
+                    <TextBox IsReadOnly="True" x:Name="OverallUnlucky" FontWeight="Bold" HorizontalAlignment="Left" Margin="1146,108,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27"/>
+                    <Button Content="CLEAR" HorizontalAlignment="Left" Margin="950,612,0,0" VerticalAlignment="Top" Height="83" Width="316" Click="ClearOverallStats"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="937,272,0,0" Text="Overall Sim Count" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="171"/>
+                    <TextBox IsReadOnly="True" x:Name="OverallSimCount" HorizontalAlignment="Left" Margin="1146,272,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="27" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="937,314,0,0" Text="Survival rate of prisoners (Should match the chance for all of them to survive)" FontSize="18" TextWrapping="Wrap" VerticalAlignment="Top" Height="126" Width="171"/>
+                    <TextBox IsReadOnly="True" x:Name="SurvRate" HorizontalAlignment="Left" Margin="1146,335,0,0" Text="000" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="120" Height="77" FontWeight="Bold"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,751,0,0" Text="This is a simple simulation programm. Used for the riddle in this video https://www.youtube.com/watch?v=iSNsgj1OCLA" IsReadOnly="True" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="1574" Height="98"/>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Grid>
+            <TextBox x:Name="prCount" PreviewTextInput="NumberValidationTextBox" MaxLength="6" HorizontalAlignment="Left" FontSize="20" TextAlignment="Center" Margin="223,81,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Height="27"/>
+
+            <TextBox x:Name="boxesPer" PreviewTextInput="NumberValidationTextBox" MaxLength="6" HorizontalAlignment="Left" FontSize="20" TextAlignment="Center"  Margin="223,121,0,0" Text="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Height="28"/>
+            <TextBox x:Name="simCount" PreviewTextInput="NumberValidationTextBox" MaxLength="6" HorizontalAlignment="Left" FontSize="20" TextAlignment="Center"  Margin="223,163,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" Height="27" />
+
+
+
+            <TextBlock Margin="53,81,0,0" Text="Prisoners Count" TextWrapping="Wrap" FontSize="18" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="132"/>
+
+            <TextBlock Margin="53,109,0,0" Text="Number of boxes per prisoner" TextWrapping="Wrap" FontSize="16" Height="52" VerticalAlignment="Top" HorizontalAlignment="Left" Width="132"/>
+            <TextBlock Margin="53,166,0,0" Text="Simulations Count" TextWrapping="Wrap" FontSize="16" Height="52" VerticalAlignment="Top" HorizontalAlignment="Left" Width="132"/>
+            <Button Content="RandomBoxes Simulations" FontSize="20" FontStyle="Normal"  HorizontalAlignment="Left" Margin="53,209,0,0" VerticalAlignment="Top" Height="47" Width="255" Click="Button_Click" Background="#FFEAB4B4"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="350" Margin="34,357,0,0" StrokeThickness="3" Stroke="PaleVioletRed" VerticalAlignment="Top" Width="284"/>
+            <TextBlock HorizontalAlignment="Left" Margin="68,368,0,0" Text="Precalculated chances, %" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="240"/>
+            <TextBlock HorizontalAlignment="Left" Margin="53,422,0,0" Text="Chance for single prisoner to find his note" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="160"/>
+            <TextBlock HorizontalAlignment="Left" Margin="53,554,0,0" Text="Chance all prisoners to survive" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="160"/>
+            <TextBox x:Name="chancePrec_singlePr" IsReadOnly="True" PreviewTextInput="NumberValidationTextBox"  HorizontalAlignment="Left" FontSize="20" TextAlignment="Center"  Margin="53,505,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Height="27" />
+            <TextBox x:Name="chancePrec_allSurv" IsReadOnly="True" PreviewTextInput="NumberValidationTextBox"  HorizontalAlignment="Left" FontSize="20" TextAlignment="Center"  Margin="53,638,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Height="27" />
+            <Button Content="LoopBoxes Simulations" FontSize="20" FontStyle="Normal"  HorizontalAlignment="Left" Margin="53,280,0,0" VerticalAlignment="Top" Height="47" Width="255" Click="Button_Click2" Background="#FFC3EAB4"/>
+            <TextBlock HorizontalAlignment="Left" Margin="479,30,0,0" Text="Each simulation" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="240"/>
+            <TextBlock HorizontalAlignment="Left" Margin="988,30,0,0" Text="Throughout simulations" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="240"/>
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>
